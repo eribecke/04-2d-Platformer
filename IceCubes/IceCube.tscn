@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://IceCubes/IceCubes.gd" type="Script" id=1]
+[ext_resource path="res://Assets/ice.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1047, 605, 74, 81 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1121, 605, 74, 81 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1195, 605, 74, 81 )
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 16.5, 15.5 )
+
+[node name="IceCube" type="Area2D"]
+position = Vector2( 243, 217 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 16, -67 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 43 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 17, -67 )
+shape = SubResource( 44 )
+
+[connection signal="body_entered" from="." to="." method="_on_IceCube_body_entered"]
