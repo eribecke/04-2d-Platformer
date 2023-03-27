@@ -13,8 +13,11 @@ Built using Godot 3.5
 ## References
 
 I created the sprite sheets for my penguin character, the game background, and the icecube sprite using Procreate.
+
 The music I used for the game is "Mall" which can be found on (https://patrickdearteaga.com/royalty-free-music/full-list/)
+
 For the platforms I used the Platformer Art Pixel Redux pack from (https://www.kenney.nl/assets/platformer-art-pixel-redux)
+
 For the icecube collecting sound effect I used sqeeeek_bell_ting2.wav by sqeeeek on (https://freesound.org/people/sqeeeek/sounds/237105/)
 
 ## Future Development
